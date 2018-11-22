@@ -208,7 +208,7 @@ After that respawn a new bash shell and gdb should have a different appearance w
 
 ## Crash Analysis has been done so far 
 
--	[analysis/1_strings_crash_w01_000010.md](analysis/1_strings_crash_w01_000010.md)
--	[analysis/2_strings_crash_w01_000119.md](analysis/2_strings_crash_w01_000119.md)
+-	[analysis/1_strings_crash_w01_000010.md](strings_fuzz/crash_1/1_strings_crash_w01_000010.md)
+-	[analysis/2_strings_crash_w01_000119.md](strings_fuzz/crash_2/2_strings_crash_w01_000119.md)
 
 ---
