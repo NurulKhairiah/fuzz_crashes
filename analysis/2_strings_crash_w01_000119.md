@@ -26,11 +26,11 @@ w01_000120,sig:11,Havoc:246:23552,src:w01_000924: data
 For this lets take a look at data files. I choose `w01_000119,sig:11,Havoc:58:5888,src:w01_000924: data`.
 Since this is a data file, we can take a at its content. 
 
-![crash2data.png](crash2data.png)
+![crash2data.png](../images/crash2data.png)
 
 Viewing it on a hex editor should be better.
 
-![crash2datahexcurse.png](crash2datahexcurse.png)
+![crash2datahexcurse.png](../images/crash2datahexcurse.png)
 
 There seem to contain a lot of repeating characters. It is also certainly not an ELF file because the ELF magic numbers are not present at the first few bytes of the file.
 
