@@ -1,5 +1,15 @@
-# Crash #1
+# Crash #1 - [Malformed ELF]
 ---
+
+## Overview
+
+#### Input : Malformed ELF by keeping most of the format right and leaving the byte responsible for e_machine valid to 0x3 or 0x3E 
+
+This tricks the program into thinking that it is a valid file and thus undergoing the process_elf32 function even though the ELF magic number is not correct. Since it is corrupted, one can cause the pointer at   `0x411ea6 <process_elf32+246>:	mov    eax,DWORD PTR [rdx]` to point to an address outside of the permitted address space.
+
+---
+
+## Payload choosing
 
 I select a random payload for the crash
 from the `out_20181114_04_30_10/crash directory`. Since 10 is a nice number, I choose `w01_000010,sig:11,Havoc:20061:26112,src:w00_000000`.
@@ -24,7 +34,7 @@ int main(){
 Then i compiled it with gcc
 
 ```
-gcc -o hello hello.c
+gcc -o hello hello.c -m32 ; gcc -o hello64 hello.c
 ```
 
 An example flow of intended usage of xed-func:
@@ -561,6 +571,5 @@ In the input file that causes the crash, it has invalid ELF magic number as show
 when it should have 
 
 ![../images/validelfmagic.png](../images/validelfmagic.png)
-#### Input : Malformed ELF by keeping most of the format right and leaving the byte responsible for e_machine valid to 0x3 or 0x3E which tricks the program into thinking that it is a valid file and thus undergoing the process_elf32 function. Since it is corrupted.  
 ---
 
