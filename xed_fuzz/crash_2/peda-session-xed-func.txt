@@ -1,0 +1,10 @@
+break main
+break xed_disas_elf
+break *0x412d3c
+break *0x41325f
+break *0x4123be
+break *0x41265a
+break *0x41265a
+break *0x41265a
+break *0x4123b2
+
