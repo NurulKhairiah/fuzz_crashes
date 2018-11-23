@@ -91,3 +91,6 @@ xed-func -xv 0 -v -0 -i <ELF File>
 Using the Nanyang Technological University's In house fuzzing tool ( as described in the README.md of the repository ), we get the out_20181114_04_30_10 folder which I did for strings_fuzz. 
 
 ---
+
+Analysis so far:
+-	[crash_1/crash_1_w01_000001.md](crash_1/1_xed_crash_w01_000010)
