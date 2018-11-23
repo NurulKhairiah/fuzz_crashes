@@ -1,4 +1,4 @@
 break main
-break *0x411ea6
-break *process_elf32+246
+break xed_disas_elf
+break process_elf32
 
