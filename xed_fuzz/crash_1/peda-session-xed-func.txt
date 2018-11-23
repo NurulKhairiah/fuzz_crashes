@@ -1,0 +1,4 @@
+break main
+break *0x411ea6
+break *process_elf32+246
+
